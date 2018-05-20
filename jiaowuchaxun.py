@@ -34,8 +34,6 @@ def tk_login():
         fm[1].pack()
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8') #改变标准输出的默认编码
-#user_id=165150221
-#user_password=19980423
 #登录时需要POST的数据
 def cha():
         user_id = userid.get()
@@ -76,14 +74,14 @@ def cha():
         filename = str(user_id)
 
 
-
+#输出一个完全的网页
         web=open("./"+filename+"课表.html" ,"w+")
 
         web.write(str1)
         web.close()
         filepath=os.getcwd()
         print_file(str1)
-
+#输出一个单独的课程表
 def print_file(str1):
         user_id=userid.get()
         filename=str(user_id)
